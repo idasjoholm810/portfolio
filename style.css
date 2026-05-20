@@ -560,7 +560,6 @@ p a:visited {
 }
 
 /* Responsivt */
-
 @media (max-width: 900px) {
 
     .about-start {
@@ -574,10 +573,19 @@ p a:visited {
 
     .about-start__content {
         max-width: 100%;
+        text-align: center;
+        margin-inline: auto;
+    }
+
+    .about-start__title,
+    .about-start__text,
+    .about-start__label {
+        text-align: center;
     }
 
     .about-start__stats {
         width: 100%;
+        justify-items: center;
     }
 }
 
@@ -589,20 +597,25 @@ p a:visited {
 
     .about-start__stats {
         grid-template-columns: 1fr;
+        justify-items: center;
     }
 
     .stat-card {
         min-height: 140px;
         padding: 28px;
+        text-align: center;
+        align-items: center;
     }
 
     .about-start__title {
         line-height: 1.1;
+        text-align: center;
     }
 
     .about-start__text {
         font-size: 1rem;
         line-height: 1.8;
+        text-align: center;
     }
 }
 
