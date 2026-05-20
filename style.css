@@ -2678,7 +2678,7 @@ color: var(--color-pink);
   background: var(--color-blue-medium);
 }
 
-/* inner container */
+/* container */
 
 .project-card__container {
   width: min(1180px, calc(100% - 2rem));
@@ -2688,6 +2688,13 @@ color: var(--color-pink);
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
   align-items: center;
+
+  opacity: 0;
+  transform: translateY(70px);
+  transition:
+    opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
 }
 
 /* reverse layout */
@@ -2700,10 +2707,15 @@ color: var(--color-pink);
   order: 1;
 }
 
+/* image */
+
 .project-card__image {
-  background: var();
   border-radius: 16px;
   overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.9s ease;
 }
 
 .project-card__image img {
@@ -2712,6 +2724,34 @@ color: var(--color-pink);
   object-fit: contain;
 }
 
+/* content animation */
+
+.project-card__content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.9s ease;
+}
+
+/* visible state */
+
+.project-card.is-visible .project-card__container {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card.is-visible .project-card__image {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.15s;
+}
+
+.project-card.is-visible .project-card__content {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+/* tag */
 
 .project-card__tag {
   display: inline-flex;
@@ -2724,6 +2764,8 @@ color: var(--color-pink);
   letter-spacing: 1px;
 }
 
+/* title */
+
 .project-card__title {
   margin-bottom: 1rem;
   color: var(--color-light);
@@ -2731,11 +2773,15 @@ color: var(--color-pink);
   line-height: 1.1;
 }
 
+/* description */
+
 .project-card__description {
   margin-bottom: 2rem;
   color: var(--color-light);
   line-height: 1.8;
 }
+
+/* list */
 
 .project-card__list {
   list-style: none;
@@ -2746,40 +2792,66 @@ color: var(--color-pink);
 
 .project-card__list li {
   position: relative;
-
   padding-left: 1.4rem;
-
   color: var(--color-light);
 }
 
 .project-card__list li::before {
   content: "";
-
   position: absolute;
   left: 0;
   top: 11px;
-
   width: 6px;
   height: 6px;
-
   border-radius: 50%;
   background: var(--color-blue-light);
 }
+
+/* =========================
+   TABLET / SMALL DESKTOP
+========================= */
 
 @media (max-width: 950px) {
 
   .project-card__container {
     grid-template-columns: 1fr;
-
     gap: 3rem;
     padding: 5rem 0;
+
+    justify-items: center;
+    text-align: center;
   }
 
   .project-card--reverse .project-card__image,
   .project-card--reverse .project-card__content {
     order: unset;
   }
+
+  .project-card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card__list {
+    align-items: center;
+  }
+
+  .project-card__list li {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .project-card__list li::before {
+    position: static;
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
 }
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 600px) {
 
@@ -2787,10 +2859,14 @@ color: var(--color-pink);
     width: min(100% - 1.25rem);
     gap: 2rem;
     padding: 4rem 0;
+
+    justify-items: center;
+    text-align: center;
   }
 
   .project-card__image {
     padding: 1.25rem;
+    max-width: 90%;
   }
 
   .project-card__title {
@@ -2801,48 +2877,11 @@ color: var(--color-pink);
   .project-card__list li {
     font-size: 0.95rem;
   }
-}
 
-/* Animation */
-
-.project-card__container {
-  opacity: 0;
-  transform: translateY(70px);
-  transition:
-    opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
-}
-
-.project-card.is-visible .project-card__container {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-.project-card__image {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.9s ease;
-}
-
-.project-card__content {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.9s ease;
-}
-
-/* when card is visible */
-.project-card.is-visible .project-card__image {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.15s;
-}
-
-.project-card.is-visible .project-card__content {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.3s;
+  .project-card__tag {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 
