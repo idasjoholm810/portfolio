@@ -292,9 +292,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-/* =========================
-   HERO
-========================= */
+/* Hero */
 
 .hero {
     background: linear-gradient(193deg, #083A48 42.93%, #4A8495 76.83%);
@@ -366,19 +364,17 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1.6rem;
 }
 
-/* =========================
-   RESPONSIVE HERO
-========================= */
+/* Resonsivt */
 
 @media (max-width: 768px) {
 
     .hero__inner {
-        padding-top: 1.5rem;
+        padding-top: 2.5rem;
         align-items: flex-start;
     }
 
     .hero {
-        padding-top: calc(var(--header-height) - 1rem);
+        padding-top: calc(var(--header-height) + 1rem);
     }
 
     /* remove eyebrow in mobile */
@@ -407,9 +403,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* =========================
-   HERO ANIMATION
-========================= */
+/* Animation */
 
 .hero__short-title,
 .hero__title,
