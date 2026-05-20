@@ -603,29 +603,49 @@ p a:visited {
     color: rgba(255,255,255,0.3);
 }
 
-/* =========================
-   ANIMATION (FIXED)
-========================= */
+/* Animation */
 
-.stat-card {
+.about-start__content {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.about-start.in-view .stat-card {
+.about-start__stats {
+    opacity: 1; 
+    transform: none;
+}
+
+.about-start.in-view .about-start__content {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Stagger */
-.about-start.in-view .stat-card:nth-child(1) { transition-delay: 0.05s; }
-.about-start.in-view .stat-card:nth-child(2) { transition-delay: 0.1s; }
-.about-start.in-view .stat-card:nth-child(3) { transition-delay: 0.15s; }
-.about-start.in-view .stat-card:nth-child(4) { transition-delay: 0.2s; }
+.stat-card {
+    opacity: 1;
+    transform: none;
+}
 
-/* =========================
-   TABLET
-========================= */
+
+.about-start.in-view .stat-card {
+    animation: fadeInOnly 0.6s ease forwards;
+}
+
+.about-start.in-view .stat-card:nth-child(1) { animation-delay: 0.05s; }
+.about-start.in-view .stat-card:nth-child(2) { animation-delay: 0.1s; }
+.about-start.in-view .stat-card:nth-child(3) { animation-delay: 0.15s; }
+.about-start.in-view .stat-card:nth-child(4) { animation-delay: 0.2s; }
+
+@keyframes fadeInOnly {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsivt */
 
 @media (max-width: 900px) {
 
@@ -645,9 +665,6 @@ p a:visited {
     }
 }
 
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width: 600px) {
 
@@ -676,6 +693,7 @@ p a:visited {
         text-align: center;
     }
 }
+
 
 
 
