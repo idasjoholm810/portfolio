@@ -162,7 +162,8 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-/* HEADER */
+/* Header */
+
 .site-header {
     height: var(--header-height);
     background-color: var(--color-black);
@@ -186,9 +187,10 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 1.5rem;
 }
 
-/* MENU DESKTOP */
+
 .menu {
     display: flex;
     align-items: center;
@@ -208,17 +210,8 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-light);
 }
 
-/* HAMBURGER (DEFAULT = HIDDEN) */
-.menu__button {
-    background: none;
-    border: 0;
-    padding: 0;
-    color: var(--color-light);
-    display: none;
-    margin-left: 2rem;
-}
 
-/* SOCIAL */
+
 .menu-social {
     display: flex;
     gap: 1.6rem;
@@ -227,23 +220,46 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
 }
 
-/* RESPONSIVE */
+
+
+.menu__button {
+    background: none;
+    border: 0;
+    padding: 0;
+    color: var(--color-light);
+    display: none;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+
 @media (max-width: 1024px) {
 
+    /* hide desktop menu */
     .menu__list {
         display: none;
     }
 
+    /* show hamburger */
     .menu__button {
         display: inline-flex;
     }
 
+    /* hide social icons 🔥 FIX */
     .menu-social {
-      margin-left: auto;
+        display: none;
+    }
+
+    /* nicer spacing */
+    .site-header__inner {
+        padding: 0 1.2rem;
     }
 }
 
-/* RESPONSIVE MENU OVERLAY */
+/* =========================
+   RESPONSIVE MENU OVERLAY
+========================= */
+
 .responsive-menu {
     position: fixed;
     inset: 0;
@@ -273,6 +289,7 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     font-size: 2rem;
 }
+
 
 /* Hero */
 .hero {
