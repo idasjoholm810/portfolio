@@ -1013,6 +1013,7 @@ p a:visited {
 
 
 
+/* Portfolio startsidan */
 /* Portfolio startsida */
 
 .portfolio {
@@ -1026,7 +1027,6 @@ p a:visited {
     flex-direction: column;
     gap: 5rem;
 }
-
 
 .portfolio__header {
     display: grid;
@@ -1058,7 +1058,6 @@ p a:visited {
     margin: 0;
 }
 
-
 .portfolio__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1073,9 +1072,9 @@ p a:visited {
     gap: 1.5rem;
 }
 
-
 .portfolio__image-wrapper {
     aspect-ratio: 8 / 9;
+    position: relative;
 }
 
 .portfolio__image-wrapper img {
@@ -1089,7 +1088,6 @@ p a:visited {
 .portfolio__card:hover img {
     transform: scale(1.04);
 }
-
 
 .portfolio__number {
     position: absolute;
@@ -1107,7 +1105,6 @@ p a:visited {
     letter-spacing: 0.08em;
 }
 
-
 .portfolio__content {
     display: flex;
     flex-direction: column;
@@ -1120,7 +1117,6 @@ p a:visited {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-
     color: var(--color-pink);
 }
 
@@ -1136,13 +1132,11 @@ p a:visited {
     line-height: 1.6;
 }
 
-
 .portfolio__button {
     margin-top: 1rem;
     display: flex;
     justify-content: center;
 }
-
 
 /* Responsivt */
 
@@ -1155,7 +1149,6 @@ p a:visited {
     .portfolio__cards {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 @media (max-width: 768px) {
@@ -1165,28 +1158,35 @@ p a:visited {
         text-align: center;
     }
 
+    .portfolio__inner {
+        gap: 3rem;
+    }
+
     .portfolio__header {
         justify-items: center;
         text-align: center;
-    }
-
-    .portfolio__content {
-        align-items: center;
+        gap: 1.2rem;
     }
 
     .portfolio__cards {
         grid-template-columns: 1fr;
     }
 
+    .portfolio__content {
+        align-items: center;
+    }
+
     .portfolio__content h3 {
         font-size: 1.6rem;
     }
 
+    .portfolio__button {
+        margin-top: 0.5rem;
+    }
 }
 
 /* Animation */
 
-/* HEADER (kommer först) */
 .portfolio__header {
     opacity: 0;
     transform: translateY(20px);
@@ -1198,32 +1198,20 @@ p a:visited {
     transform: translateY(0);
 }
 
-/* CARDS BASE STATE */
 .portfolio__card {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* ACTIVE STATE */
 .portfolio__card.in-view {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* STAGGER (kommer ett och ett) */
-.portfolio__card:nth-child(1) {
-    transition-delay: 0.15s;
-}
-
-.portfolio__card:nth-child(2) {
-    transition-delay: 0.3s;
-}
-
-.portfolio__card:nth-child(3) {
-    transition-delay: 0.45s;
-}
-
+.portfolio__card:nth-child(1) { transition-delay: 0.15s; }
+.portfolio__card:nth-child(2) { transition-delay: 0.3s; }
+.portfolio__card:nth-child(3) { transition-delay: 0.45s; }
 
 @media (prefers-reduced-motion: reduce) {
     .portfolio__header,
@@ -1233,6 +1221,7 @@ p a:visited {
         transform: none;
     }
 }
+
 
 /* Quote-sektionen startsida */
 
