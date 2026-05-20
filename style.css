@@ -108,6 +108,21 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.05);
 }
 
+/* Links */
+p a {
+  color: var(--color-pink);
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+p a:visited {
+  color: var(--color-pink);
+}
+
 /* Main layout */
 .container {
     display: grid;
