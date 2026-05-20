@@ -597,14 +597,13 @@ p a:visited {
 
     .about-start__stats {
         grid-template-columns: 1fr;
-        justify-items: center;
+        justify-items: stretch;
     }
 
     .stat-card {
         min-height: 140px;
         padding: 28px;
         text-align: center;
-        align-items: center;
     }
 
     .about-start__title {
