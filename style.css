@@ -597,6 +597,10 @@ p a:visited {
 }
 
 /* Colors */
+
+.stat-card {
+    color: var(--color-purple);
+}
 .stat-card--blue h3 {
     color: var(--color-blue-light);
 }
@@ -610,12 +614,6 @@ p a:visited {
 }
 
 
-/* =========================
-   ABOUT START – ANIMATION ONLY
-   CLEAN + STABLE
-========================= */
-
-/* TEXT (waterfall feel, simple) */
 .about-start__content {
     opacity: 0;
     transform: translateY(30px);
