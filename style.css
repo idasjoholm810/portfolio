@@ -245,7 +245,6 @@ h1, h2, h3, h4, h5, h6 {
         display: inline-flex;
     }
 
-    /* hide social icons 🔥 FIX */
     .menu-social {
         display: none;
     }
@@ -256,9 +255,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* =========================
-   RESPONSIVE MENU OVERLAY
-========================= */
 
 .responsive-menu {
     position: fixed;
@@ -370,7 +366,12 @@ h1, h2, h3, h4, h5, h6 {
 
     .hero__inner {
         padding-top: 2.5rem;
-        align-items: flex-start;
+        align-items: center; 
+        text-align: center;  
+    }
+
+    .hero__content {
+        align-items: center;
     }
 
     .hero {
@@ -384,18 +385,24 @@ h1, h2, h3, h4, h5, h6 {
 
     .hero__desc {
         max-width: 100%;
+        text-align: center;
+    }
+    
+    .hero__title {
+        text-align: center;
     }
 
     .hero__button {
         flex-direction: column;
         width: 100%;
         gap: 1rem;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .button,
     .button-line {
         width: 100%;
+        text-align: center;
     }
 
     .hero__title {
