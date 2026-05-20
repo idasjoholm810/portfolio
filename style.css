@@ -368,10 +368,13 @@ h1, h2, h3, h4, h5, h6 {
         padding-top: 2.5rem;
         align-items: center; 
         text-align: center;  
+        justify-content: center;
+        width: 100%;
     }
 
     .hero__content {
         align-items: center;
+        width: 100%;
     }
 
     .hero {
