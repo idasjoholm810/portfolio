@@ -181,6 +181,7 @@ p a:visited {
 
 .site-header {
     height: var(--header-height);
+    padding: 0;
     background-color: var(--color-black);
     position: fixed;
     top: 0;
@@ -202,7 +203,7 @@ p a:visited {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1.5rem;
+    padding: 0;
 }
 
 
