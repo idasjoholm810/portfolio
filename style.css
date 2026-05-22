@@ -2645,11 +2645,6 @@ transform: translateY(60px);
 } */
 
 
-
-/* =========================
-   TABLET / <= 980px
-   ========================= */
-
 @media (max-width: 980px) {
 
     .service-block {
@@ -2674,11 +2669,6 @@ transform: translateY(60px);
         margin-inline: auto;
     }
 }
-
-
-/* =========================
-   MOBILE / <= 700px
-   ========================= */
 
 @media (max-width: 700px) {
 
@@ -2711,10 +2701,6 @@ transform: translateY(60px);
     }
 }
 
-
-/* =========================
-   SMALL MOBILE / <= 360px
-   ========================= */
 
 @media (max-width: 360px) {
 
@@ -2992,12 +2978,9 @@ transform: translateY(60px);
   width: 100%;
 }
 
-
 .project-card {
   width: 100%;
 }
-
-/* alternating backgrounds */
 
 .project-card:nth-child(odd) {
   background: var(--color-super-dark-blue);
@@ -3006,8 +2989,6 @@ transform: translateY(60px);
 .project-card:nth-child(even) {
   background: var(--color-blue-medium);
 }
-
-/* container */
 
 .project-card__container {
   width: min(1180px, calc(100% - 2rem));
@@ -3027,7 +3008,6 @@ transform: translateY(60px);
 }
 
 /* reverse layout */
-
 .project-card--reverse .project-card__image {
   order: 2;
 }
@@ -3035,8 +3015,6 @@ transform: translateY(60px);
 .project-card--reverse .project-card__content {
   order: 1;
 }
-
-/* image */
 
 .project-card__image {
   border-radius: 16px;
@@ -3061,8 +3039,6 @@ transform: translateY(60px);
   transition: all 0.9s ease;
 }
 
-/* visible state */
-
 .project-card.is-visible .project-card__container {
   opacity: 1;
   transform: translateY(0);
@@ -3080,8 +3056,6 @@ transform: translateY(60px);
   transition-delay: 0.3s;
 }
 
-/* tag */
-
 .project-card__tag {
   display: inline-flex;
   padding: 0.45rem 0.9rem;
@@ -3093,8 +3067,6 @@ transform: translateY(60px);
   letter-spacing: 1px;
 }
 
-/* title */
-
 .project-card__title {
   margin-bottom: 1rem;
   color: var(--color-light);
@@ -3102,15 +3074,11 @@ transform: translateY(60px);
   line-height: 1.1;
 }
 
-/* description */
-
 .project-card__description {
   margin-bottom: 2rem;
   color: var(--color-light);
   line-height: 1.8;
 }
-
-/* list */
 
 .project-card__list {
   list-style: none;
