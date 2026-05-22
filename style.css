@@ -336,11 +336,10 @@ p a:visited {
     margin: 0;
     color: var(--color-pink);
     font-family: var(--font-family-2);
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
     font-style: normal;
-    font-weight: 700;
     line-height: 1.21875rem;
-    letter-spacing: 0.1625rem;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
 }
 
