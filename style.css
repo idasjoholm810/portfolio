@@ -2256,14 +2256,15 @@ p a:visited {
 .services-header__text {
 
         h1 {
-        margin: 0 auto;
+        margin: 0;
         color: var(--color-blue-light);
         font-family: var(--font-family-1);
         font-size: clamp(2rem, 5vw, 4.3rem);
         font-weight: 500;
         line-height: 1.2;
-        max-width: 65rem;
+        max-width: 60rem;
         text-transform: uppercase;
+        text-align: center;
         text-wrap: balance;
     }
 
