@@ -24,22 +24,3 @@ const headerScroll = () => {
 }
 
 headerScroll()
-
-
-// const header = document.querySelector('.site-header');
-
-// let lastScrollY = window.scrollY;
-
-// window.addEventListener('scroll', () => {
-//   const currentScrollY = window.scrollY;
-
-//   if (currentScrollY > lastScrollY && currentScrollY > 100) {
-//     // Scrollar NER → göm header
-//     header.classList.add('hide');
-//   } else {
-//     // Scrollar UPP → visa header
-//     header.classList.remove('hide');
-//   }
-
-//   lastScrollY = currentScrollY;
-// });

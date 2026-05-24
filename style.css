@@ -201,7 +201,7 @@ p a:visited {
 }
 
 .site-header.site-header--inverted {
-    background-color: var(--color-black);
+    background-color: var(--color-super-dark-blue);
 }
 
 .site-header__inner {
@@ -283,11 +283,13 @@ p a:visited {
 .responsive-menu {
     position: fixed;
     inset: 0;
-    background-color: var(--color-black);
+    background-color: var(--color-super-dark-blue);
     display: none;
     align-items: center;
     justify-content: center;
     z-index: 998;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 .responsive-menu.responsive-menu--open {
@@ -307,7 +309,19 @@ p a:visited {
 .responsive-menu__link {
     color: var(--color-pink);
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.8rem;
+}
+
+
+.mobile-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* Hero startsite*/
