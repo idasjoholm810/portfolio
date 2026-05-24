@@ -318,10 +318,13 @@ p a:visited {
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-
     list-style: none;
     margin: 0;
     padding: 0;
+
+    .menu-social__item {
+
+    }
 }
 
 /* Hero startsite*/
@@ -3009,15 +3012,22 @@ p a:visited {
 /* Contact site */
 /* Form */
 
+
 .contact-form {
     background: var(--color-blue-medium);
     padding-block: var(--spacing-section);
+    overflow-x: hidden;
 }
 
 .contact-form__inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
+    max-width: 100%;
+}
+
+.contact-form__inner > * {
+    min-width: 0;
 }
 
 .contact-info h2 {
@@ -3040,6 +3050,7 @@ p a:visited {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    max-width: 100%;
 }
 
 .info-item {
@@ -3051,6 +3062,7 @@ p a:visited {
     border: 1px solid rgba(255,255,255,0.05);
     border-radius: 10px;
     transition: 0.3s ease;
+    max-width: 100%;
 }
 
 .info-item:hover {
@@ -3080,9 +3092,10 @@ p a:visited {
 .info-item p {
     margin: 0;
     color: var(--color-light);
-    font-size: 1.rem;
+    font-size: 1rem;
     line-height: 1.4;
     font-family: var(--font-family-2);
+    word-break: break-word;
 }
 
 .contact-form-box {
@@ -3090,6 +3103,7 @@ p a:visited {
     background: rgba(255,255,255,0.04);
     border-radius: 14px;
     border: 1px solid rgba(255,255,255,0.05);
+    max-width: 100%;
 }
 
 .contact-form-box h3 {
@@ -3117,7 +3131,8 @@ p a:visited {
 .contact-form-box input,
 .contact-form-box textarea {
     width: 100%;
-    padding: 1rem 1rem;
+    max-width: 100%;
+    padding: 1rem;
     margin-bottom: 1.5rem;
     border: none;
     border-radius: 8px;
@@ -3165,12 +3180,12 @@ p a:visited {
     opacity: 0.95;
 }
 
-
 #formStatus {
     margin-top: 1rem;
     color: rgba(255,255,255,0.7);
 }
 
+/* Responsive */
 
 @media (max-width: 900px) {
     .contact-form {
@@ -3180,16 +3195,17 @@ p a:visited {
     .contact-form__inner {
         grid-template-columns: 1fr;
         gap: 3rem;
+        width: 100%;
     }
 }
 
 @media (max-width: 600px) {
     .contact-form {
-        padding: 4rem 0; 
+        padding: 4rem 0;
     }
 
     .contact-form__inner {
-        width: min(100% - 1.25rem);
+        width: 100%;
     }
 
     .contact-form-box {
