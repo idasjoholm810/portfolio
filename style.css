@@ -1576,7 +1576,7 @@ p a:visited {
         .contact__email {
             color: var(--color-light);
             font-family: var(--font-family-1);
-            font-size: clamp(0.75rem, 0.3984rem + 0.9375vw, 1.125rem);
+            font-size: 1.1rem;
             font-style: normal;
             font-weight: lighter;
             line-height: 150%;
@@ -1589,7 +1589,7 @@ p a:visited {
         .contact__phone {
             color: var(--color-light);
             font-family: var(--font-family-1);
-            font-size: clamp(0.75rem, 0.3984rem + 0.9375vw, 1.125rem);
+            font-size: 1.1rem;
             font-style: normal;
             font-weight: lighter;
             line-height: 150%;
@@ -1605,7 +1605,7 @@ p a:visited {
 .footer-menu {
     .footer-menu__title {
         color: var(--color-light);
-        font-size: clamp(0.75rem, 0.3984rem + 0.9375vw, 1.125rem);
+        font-size: 1.1rem;
         font-style: normal;
         font-weight:lighter;
         line-height: 150%;
