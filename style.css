@@ -187,7 +187,7 @@ p a:visited {
 .site-header {
     height: var(--header-height);
     padding: 0;
-    background-color: var(--color-black);
+    background-color: var(--color-super-dark-blue);
     position: fixed;
     top: 0;
     left: 0;
@@ -312,10 +312,11 @@ p a:visited {
 
 /* Hero startsite*/
 .hero {
-    background: linear-gradient(193deg, #083A48 42.93%, #4A8495 76.83%);
+    /* background: linear-gradient(193deg, #083A48 42.93%, #4A8495 76.83%); */
+    background: linear-gradient(187deg, #031F28 43.6%, #083A48 74.28%);
     min-height: 100vh;
     padding-top: var(--header-height);
-    padding-bottom: var(--header-height);
+    /* padding-bottom: var(--header-height); */
 }
 
 .hero__inner {
@@ -363,6 +364,10 @@ p a:visited {
     justify-content: center;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
+    
+    /* span {
+        color: #e397ff;
+    } */
 
     /* overflow-wrap: normal;
     word-break: normal;
@@ -665,7 +670,9 @@ p a:visited {
 @media (max-width: 600px) {
 
     .about-start {
-        padding: 70px 16px;
+        /* padding: 70px 16px; */
+    padding-bottom: 4rem;
+    padding-top: 2rem;
     }
 
     .about-start__stats {
@@ -847,7 +854,7 @@ p a:visited {
 /* Mobile */
 @media (max-width: 600px) {
   .services {
-    padding-block: 2rem;
+    padding-block: 4rem;
   }
 
   .services__inner {
@@ -1039,7 +1046,8 @@ p a:visited {
 @media (max-width: 768px) {
 
     .portfolio {
-        padding-block: 5rem;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
         text-align: center;
     }
 
@@ -1198,7 +1206,7 @@ p a:visited {
 @media (max-width: 900px) {
 
     .quote {
-        padding-block: 6rem;
+        padding-block: 4rem;
     }
     .quote__inner {
         grid-template-columns: 1fr;
@@ -1336,7 +1344,7 @@ p a:visited {
 
 @media (max-width: 991px) {
   .help {
-    padding: 6rem 1.5rem;
+    padding: 4rem 1.5rem;
   }
 
   .help__grid {
@@ -1356,7 +1364,7 @@ p a:visited {
 
 @media (max-width: 600px) {
   .help {
-    padding: 6rem 1rem; 
+    padding-block: 4rem; 
   }
 
   .help__top {
@@ -1397,7 +1405,7 @@ p a:visited {
 
 @media (max-width: 360px) {
   .help {
-    padding: 4rem 1rem;
+    padding-block: 4rem;
   }
 
   .help-card {
@@ -1501,8 +1509,8 @@ p a:visited {
 
 @media (max-width: 900px) {
     .contact {
-        padding-top: 6rem;
-        padding-bottom: 6rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
     }
 
     .contact__inner {
@@ -1701,7 +1709,7 @@ p a:visited {
 /* Om mig-sidan */
 .about {
     padding-block: var(--spacing-section);
-    background: linear-gradient(187deg, #083A48 43.6%, #4A8495 74.28%);
+    background: var(--color-super-dark-blue)
 }
 
 .about__inner {
@@ -2228,10 +2236,10 @@ p a:visited {
 }
 
 
-
 /* Tjänstesidan */
+
 .services-header {
-    background-color: var(--color-black);
+    background-color: var(--color-super-dark-blue);
     padding-block: var(--spacing-section);
     margin: 0;
 }
@@ -2247,7 +2255,7 @@ p a:visited {
 }
 
 .services-header__text {
-    
+
     h3 {
         color: var(--color-pink);
         font-family: var(--font-family-2);
@@ -2284,7 +2292,7 @@ p a:visited {
 
 .services-site {
     width: 100%;
-    background: var(--color-super-dark-blue);
+    background: var(--color-blue-medium);
     position: relative;
     overflow: hidden;
 }
@@ -2301,21 +2309,26 @@ p a:visited {
     align-items: center;
     position: relative;
     overflow: hidden;
+
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     isolation: isolate;
 }
 
+/* Mörk sektion */
+
 .service-block--dark {
-    background: var(--color-super-dark-blue);
+    background: var(--color-blue-medium);
     color: var(--color-light);
     position: relative;
     width: 100%;
     min-height: 100%;
 }
 
+/* Ljus sektion */
+
 .service-block--light {
-    background: var(--color-blue-medium);
+    background: var(--color-super-dark-blue);
     color: var(--color-light);
     position: relative;
     width: 100%;
@@ -2373,12 +2386,14 @@ p a:visited {
     max-width: 640px;
 }
 
+/* Kort */
 
 .service-card {
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 16px;
     padding: 42px;
+    backdrop-filter: blur(10px);
 }
 
 .service-card__title {
@@ -2398,6 +2413,8 @@ p a:visited {
     padding: 0;
 }
 
+/* LISTA */
+
 .service-card li {
     display: flex;
     align-items: center;
@@ -2407,49 +2424,50 @@ p a:visited {
     color: rgba(255,255,255,0.88);
 }
 
+/* IKON-CIRKEL */
+
 .service-card__icon {
     width: 22px;
     height: 22px;
     min-width: 22px;
+    min-height: 22px;
     border-radius: 50%;
-    display: flex;
+    background: var(--color-pink);
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    flex-shrink: 0;
+    overflow: hidden;
+
+    position: relative;
 }
+
+/* SVG */
 
 .service-card__icon svg {
     width: 12px;
     height: 9px;
+
+    display: block;
+    overflow: visible;
+
+    flex-shrink: 0;
 }
 
-/* MÖRKA BLOCK = grön cirkel + svart bock */
+/* Mörka block */
 
 .service-block--dark .service-card__icon {
     background: var(--color-pink);
 }
 
-/* LJUSA BLOCK = mörkblå cirkel + vit bock */
+/* Ljusa block */
 
 .service-block--light .service-card__icon {
-    background: var(--color-super-dark-blue);
+    background: var(--color-pink);
 }
 
-/* MÖRKA BLOCK */
-
-/* .service-block--dark .service-card__title {
-    color: var(--color-pink);
-} */
-
-/* LJUSA BLOCK */
-
-/* .service-block--light .service-card__title {
-    color: var(--color-super-dark-blue);
-} */
-
-/* .service-block--light .service-block__eyebrow {
-    color: var(--color-super-dark-blue);
-} */
-
+/* RESPONSIVE */
 
 @media (max-width: 980px) {
 
@@ -2464,6 +2482,7 @@ p a:visited {
         text-align: center;
         max-width: 800px;
         margin-inline: auto;
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -2506,7 +2525,6 @@ p a:visited {
     }
 }
 
-
 @media (max-width: 360px) {
 
     .service-block {
@@ -2527,7 +2545,8 @@ p a:visited {
     }
 }
 
-/* Animation på tjänsterna */
+/* Animation */
+
 .service-block {
     opacity: 0;
     transform: translateY(60px);
@@ -2540,14 +2559,12 @@ p a:visited {
     transform: translateY(0);
 }
 
-
 .service-block__content,
 .service-card {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
-
 
 .service-block.is-visible .service-block__content {
     opacity: 1;
@@ -3147,7 +3164,7 @@ p a:visited {
 
 @media (max-width: 600px) {
     .contact-form {
-        padding: 4rem 0;
+        padding: 4rem 0; 
     }
 
     .contact-form__inner {
