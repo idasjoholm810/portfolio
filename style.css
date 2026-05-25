@@ -533,6 +533,7 @@ p a:visited {
     letter-spacing: 0.25em;
     color: var(--color-pink);
     text-transform: uppercase;
+    margin-bottom: 0.5rem;
 }
 
 .about-start__title {
@@ -947,7 +948,7 @@ p a:visited {
     font-weight: 400;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 
 .portfolio__header h2 {
