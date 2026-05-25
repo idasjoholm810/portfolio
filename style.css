@@ -1730,7 +1730,7 @@ p a:visited {
 }
 
 .about__inner {
-    /* margin-top: 50px; */
+
 }
 
 .about__content {
@@ -1761,14 +1761,14 @@ p a:visited {
     line-height:  1.1;
     font-weight: 550;
     margin-top: 0.5rem;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.2rem;
 }
 
 .about__text p {
     color: rgba(255,255,255,0.72);
     font-size: clamp(1rem, 1.4vw, 1.12rem);
     line-height: 1.6;
-    margin-bottom: 1.6rem;
+    margin-bottom: 0.2rem;
 }
 
 
@@ -1821,7 +1821,7 @@ p a:visited {
     font-size: clamp(2.2rem, 3.5vw, 3.4rem);
     color: var(--color-pink);
     font-weight: lighter;
-    margin: 0 0 1.5rem;
+    margin: 0 0 1rem;
 }
 
 .work__text {
@@ -1830,6 +1830,7 @@ p a:visited {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 4rem;
+    margin-top: 0;
 }
 
 
@@ -1868,6 +1869,7 @@ p a:visited {
     word-break: break-word;
     overflow-wrap: break-word;
     font-weight: lighter;
+    margin-bottom: 0.4rem;
 }
 
 .work__card p {
@@ -1876,6 +1878,7 @@ p a:visited {
     margin: 0;
     word-break: break-word;
     overflow-wrap: break-word;
+    margin: 0;
 }
 
 .work__info {
