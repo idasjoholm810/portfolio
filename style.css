@@ -3186,7 +3186,10 @@ p a:visited {
 }
 
 @media (max-width: 600px) {
-    
+    .contact-form {
+    padding-block: 4rem;
+}
+
     .info-item p {
     font-size: 0.9rem;
 }
