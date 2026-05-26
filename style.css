@@ -1793,7 +1793,7 @@ p a:visited {
 @media (max-width: 640px) {
 
     .about {
-        padding: 4rem 1.25rem;
+        padding-block: 4rem;
     }
 
 }
@@ -1870,6 +1870,7 @@ p a:visited {
     word-break: break-word;
     overflow-wrap: break-word;
     margin: 0;
+    font-size: 1rem;
 }
 
 .work__info {
@@ -1890,11 +1891,16 @@ p a:visited {
         margin-inline: auto;
     }
 
+    .about__image {
+            align-items: center;
+            justify-content: center;
+    }
+
 }
 
 @media (max-width: 600px) {
     .work {
-        padding: 5rem 1rem;
+        padding-block: 5rem;
     }
 
     .work__title {
@@ -1904,8 +1910,7 @@ p a:visited {
     .work__text {
         font-size: 1rem;
         line-height: 1.7;
-
-        margin-bottom: 2rem;
+        margin-bottom: 1.5em;
     }
 
     .work__cards {
@@ -1917,14 +1922,11 @@ p a:visited {
         border-radius: 14px;
     }
 
-    .work__card h3 {
-        font-size: 1.15rem;
-    }
 
-    .work__card p {
+    /* .work__card p {
         font-size: 0.95rem;
         line-height: 1.65;
-    }
+    } */
 
     .work__info {
         padding: 1.3rem;
@@ -1934,7 +1936,7 @@ p a:visited {
 
 @media (max-width: 390px) {
     .work {
-        padding: 4rem 0.8rem;
+        padding-block: 4rem;
     }
 
     .work__card {
@@ -1942,7 +1944,7 @@ p a:visited {
     }
 
     .work__card h3 {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .work__card p {
@@ -2095,10 +2097,8 @@ p a:visited {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
-
     font-size: 0.85rem;
     color: rgba(255,255,255,0.6);
-
     min-width: 0;
 }
 
@@ -2108,7 +2108,7 @@ p a:visited {
 
 .experience-card__content h3 {
     margin: 0 0 0.6rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     line-height: 1.35;
     color: var(--color-light);
     min-width: 0;
@@ -2122,6 +2122,7 @@ p a:visited {
     line-height: 1.6;
     color: rgba(255,255,255,0.75);
     min-width: 0;
+    font-size: 1rem;
     word-break: break-word;
     overflow-wrap: break-word;
 }
@@ -2174,7 +2175,7 @@ p a:visited {
     }
 
     .experience-card__content h3 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .experience-card__content p {
@@ -2189,7 +2190,6 @@ p a:visited {
     }
 
     .experience__title {
-        font-size: 2rem;
         margin-bottom: 1.5rem;
     }
 
@@ -2208,7 +2208,6 @@ p a:visited {
     }
 
     .experience-card__content h3 {
-        font-size: 1.05rem;
         line-height: 1.35;
         margin-bottom: 0.45rem;
     }
@@ -2225,11 +2224,7 @@ p a:visited {
     }
 
     .experience__title {
-        font-size: 1.7rem;
-    }
-
-    .experience-card__content h3 {
-        font-size: 0.98rem;
+    
     }
 
     .experience-card__content p {
