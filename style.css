@@ -2686,22 +2686,23 @@ p a:visited {
 }
 
 .collaboration-card li {
-    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+
     color: rgba(255,255,255,0.72);
     font-size: 0.92rem;
-    padding-left: 1rem;
     margin-bottom: 0.9rem;
 }
 
 .collaboration-card li::before {
     content: "";
-    position: absolute;
-    left: 0;
-    top: 0.5rem;
     width: 5px;
     height: 5px;
     border-radius: 50%;
     background: var(--color-pink);
+
+    flex-shrink: 0;
 }
 
 @media (max-width: 980px) {
