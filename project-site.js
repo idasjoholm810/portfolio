@@ -1,15 +1,13 @@
-const projectCards = document.querySelectorAll(".project-card");
+const projects = document.querySelectorAll('.project');
 
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target); // kör bara en gång
+            entry.target.classList.add('is-visible');
         }
     });
 }, {
-    threshold: 0.2,
-    rootMargin: "0px 0px -10% 0px"
+    threshold: 0.15
 });
 
-projectCards.forEach(card => observer.observe(card));
+projects.forEach(p => observer.observe(p));
