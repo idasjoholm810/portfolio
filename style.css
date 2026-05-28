@@ -2326,7 +2326,6 @@ p a:visited {
 }
 
 /* Mörk sektion */
-
 .service-block--dark {
     background: var(--color-blue-medium);
     color: var(--color-light);
@@ -2395,8 +2394,6 @@ p a:visited {
     max-width: 640px;
 }
 
-/* Kort */
-
 .service-card {
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.08);
@@ -2421,8 +2418,6 @@ p a:visited {
     margin: 0;
     padding: 0;
 }
-
-/* LISTA */
 
 .service-card li {
     display: flex;
@@ -2577,7 +2572,7 @@ p a:visited {
 .collaboration {
     background: var(--color-super-dark-blue);
     padding-bottom: var(--spacing-section);
-    padding-top: 4rem;
+    padding-top: 3rem;
 }
 
 
@@ -2701,7 +2696,6 @@ p a:visited {
     height: 5px;
     border-radius: 50%;
     background: var(--color-pink);
-
     flex-shrink: 0;
 }
 
