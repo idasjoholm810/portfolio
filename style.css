@@ -2261,7 +2261,6 @@ p a:visited {
 }
 
 .services-header__text {
-
         h1 {
         margin: 0;
         color: var(--color-blue-light);
@@ -2291,7 +2290,7 @@ p a:visited {
         color: var(--color-light);
         font-family: var(--font-family-2);
         max-width: 50rem;
-        font-size: clamp(1rem, 2.5vw, 1.3rem);
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
         font-weight: 200;
         line-height: 1.4;
         margin: 0.5rem auto 0;
@@ -2427,8 +2426,6 @@ p a:visited {
     line-height: 1.7;
     color: rgba(255,255,255,0.88);
 }
-
-/* IKON-CIRKEL */
 
 .service-card__icon {
     width: 22px;
