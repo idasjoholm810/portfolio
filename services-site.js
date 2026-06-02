@@ -1,43 +1,20 @@
-const blocks = document.querySelectorAll('.service-block');
-
-/* =========================
-   1. ENTRANCE ANIMATION
-========================= */
+const serviceBlocks = document.querySelectorAll('.service-block');
 
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('is-visible');
+
+      // mjuk start → gör att det inte känns direkt “trigger”
+      setTimeout(() => {
+        entry.target.classList.add('is-visible');
+      }, 200);
+
+      observer.unobserve(entry.target);
     }
   });
 }, {
-  threshold: 0.2
+  threshold: 0.12,
+  rootMargin: "0px 0px -20% 0px"
 });
 
-blocks.forEach(block => observer.observe(block));
-
-
-/* =========================
-   2. PARALLAX EFFECT
-========================= */
-
-window.addEventListener('scroll', () => {
-  blocks.forEach(block => {
-    const rect = block.getBoundingClientRect();
-
-    const content = block.querySelector('.service-block__content');
-    const card = block.querySelector('.service-card');
-
-    if (!content || !card) return;
-
-    // bara när blocket är i viewport
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
-
-      const move = rect.top * 0.03;
-      const moveCard = rect.top * 0.06;
-
-      content.style.transform = `translateY(${move}px)`;
-      card.style.transform = `translateY(${moveCard}px)`;
-    }
-  });
-});
+serviceBlocks.forEach(block => observer.observe(block));
